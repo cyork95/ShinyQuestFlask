@@ -1,0 +1,132 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+    background-color: #1a1a1a; /* Dark background like ShinyHunt */
+    color: #ffffff; /* White text */
+}
+
+nav {
+    background-color: #333;
+    padding: 10px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+}
+
+nav a {
+    color: #00b7eb; /* Bright blue links */
+    text-decoration: none;
+    margin-right: 15px;
+}
+
+nav a:hover {
+    color: #ffffff;
+}
+
+.flashes li {
+    list-style: none;
+    padding: 10px;
+    margin: 5px 0;
+    border-radius: 5px;
+}
+
+.flashes .success {
+    background-color: #28a745;
+}
+
+.flashes .error {
+    background-color: #dc3545;
+}
+
+h1 {
+    color: #00b7eb; /* Bright blue headers */
+}
+
+form {
+    margin: 20px 0;
+}
+
+form label {
+    display: block;
+    margin: 5px 0;
+    color: #ccc;
+}
+
+form input {
+    display: block;
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #555;
+    border-radius: 5px;
+    background-color: #333;
+    color: #fff;
+    width: 100%;
+    max-width: 300px;
+}
+
+form button {
+    padding: 10px 20px;
+    background-color: #00b7eb; /* Blue buttons */
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+form button:hover {
+    background-color: #0099cc;
+}
+
+/* Card layout for hunts */
+.hunt-card {
+    background-color: #2c2c2c; /* Dark gray cards */
+    padding: 15px;
+    margin: 10px 0;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.hunt-card span {
+    font-size: 1.1em;
+}
+
+.hunt-card form {
+    margin: 0;
+    display: inline;
+}
+
+.hunt-card button {
+    padding: 8px 15px;
+    margin-left: 10px;
+    background-color: #00b7eb;
+    border-radius: 5px;
+}
+
+.hunt-card button:hover {
+    background-color: #0099cc;
+}
+
+.hunt-card .complete-btn {
+    background-color: #28a745; /* Green for complete */
+}
+
+.hunt-card .complete-btn:hover {
+    background-color: #218838;
+}
+
+a {
+    color: #00b7eb;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #fff;
+}
+
+.hunt-card.completed {
+    background-color: #1a3c1a; /* Dark green for completed hunts */
+    opacity: 0.8;
+}

@@ -1,0 +1,6 @@
+{% extends "base.html" %}
+{% block title %}Dashboard{% endblock %}
+{% block content %}
+    <h1>Welcome, {{ user.username }}!</h1>
+    <p>View your hunts <a href="{{ url_for('hunts.hunts') }}">here</a>.</p>
+{% endblock %}

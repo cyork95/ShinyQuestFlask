@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+{% block title %}Add New Hunt{% endblock %}
+{% block content %}
+    <h1>Add New Hunt</h1>
+    <form method="POST" action="{{ url_for('hunts.add_hunt') }}">
+        <label for="pokemon_name">Pokémon Name</label>
+        <input type="text" id="pokemon_name" name="pokemon_name" placeholder="e.g., Pikachu" required>
+        <label for="method">Hunting Method</label>
+        <input type="text" id="method" name="method" placeholder="e.g., Soft Reset" required>
+        <button type="submit">Start Hunt</button>
+    </form>
+    <p><a href="{{ url_for('hunts.hunts') }}">Back to My Hunts</a></p>
+{% endblock %}

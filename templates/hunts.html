@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+{% block title %}My Hunts{% endblock %}
+{% block content %}
+    <h1>My Hunts</h1>
+    <a href="{{ url_for('hunts.add_hunt') }}">Add New Hunt</a>
+    <div class="hunts-container">
+        {% for hunt in hunts %}
+            <div class="hunt-card {% if hunt.status == 'Completed' %}completed{% endif %}">
+                <span>
+                    Pokémon: {{ hunt.pokemon.name }} | Method: {{ hunt.method }} |
+                    Encounters: {{ hunt.encounters }} | Status: {{ hunt.status }}
+                </span>
+                {% if hunt.status != 'Completed' %}
+                    <form method="POST" action="{{ url_for('hunts.update_hunt', hunt_id=hunt.id) }}">
+                        <button type="submit" name="action" value="increment">+1</button>
+                        <button type="submit" name="action" value="decrement">-1</button>
+                        <button type="submit" name="action" value="complete" class="complete-btn">Mark as Completed</button>
+                    </form>
+                {% endif %}
+            </div>
+        {% endfor %}
+    </div>
+{% endblock %}
